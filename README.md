@@ -1,4 +1,4 @@
-# Amazon URL Shortenizer
+# Amazon URL Shortener
 
 Tampermonkey user script to replace the amazon url to shorter version.
 
@@ -13,7 +13,7 @@ Tampermonkey user script to replace the amazon url to shorter version.
 
 ## simple install
 
-click [here](https://github.com/shosatojp/amazon-url-shortenizer/raw/master/amznurl.user.js) to install
+click [here](https://github.com/shosatojp/amazon-url-shortener/raw/master/amznurl.user.js) to install
 
 
 ## manual install
@@ -23,5 +23,5 @@ click [here](https://github.com/shosatojp/amazon-url-shortenizer/raw/master/amzn
 1. paste this url to the text box 'install from url'
 
 ```
-https://github.com/shosatojp/amazon-url-shortenizer/raw/master/amznurl.user.js
+https://github.com/shosatojp/amazon-url-shortener/raw/master/amznurl.user.js
 ```
