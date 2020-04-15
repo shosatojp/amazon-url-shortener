@@ -2,6 +2,11 @@
 
 Tampermonkey user script to replace the amazon url to shorter version.
 
+# Features
+
+- replace the url of product page
+- replace the url of prime video page
+
 # How to Install
 
 **install tampermonkey extension first.**
