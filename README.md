@@ -2,6 +2,12 @@
 
 Tampermonkey user script to replace the amazon url to shorter version.
 
+![](README/0.png)
+
+👇
+
+![](README/1.png)
+
 # Features
 
 - replace the url of product page
