@@ -2,9 +2,9 @@
 
 Tampermonkey user script to replace the amazon url to shorter version.
 
-# Install
+# How to Install
 
-*install tampermonkey extension first.*
+**install tampermonkey extension first.**
 
 ## simple install
 
