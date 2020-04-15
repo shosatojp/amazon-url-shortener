@@ -15,7 +15,7 @@
 // ==/UserScript==
 
 (() => {
-    const match = location.pathname.match(/\/.*\/dp\/(.*?)\/.*/);
+    const match = location.pathname.match(/\/.*\/dp\/(.*)(\/.*)?/i);
     if (match) {
         const newurl = `/dp/${match[1]}`;
         history.replaceState(null, null, newurl);
