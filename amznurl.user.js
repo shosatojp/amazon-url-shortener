@@ -40,14 +40,21 @@
         });
     }
 
+
     /**
-     * replace url if browser else do tests
+     * main
      */
     if (typeof location !== 'undefined') {
-        parse(location.pathname).then(parsed => getUrl(parsed)).then(url => {
-            history.replaceState(null, null, url);
-        }).catch(() => 0);
+
+        // replace url
+        parse(location.pathname)
+            .then(getUrl)
+            .then(pathname => history.replaceState(null, null, pathname))
+            .catch(() => 0);
+
     } else {
+
+        // test
         Promise.all([
             test('/dp/4522429878', '/dp/4522429878'),
             test('/dp/4522429878/hoge', '/dp/4522429878'),
@@ -57,5 +64,6 @@
         ])
             .then(() => console.log('OK'))
             .catch(() => console.log('test failed'));
+
     }
 })();
