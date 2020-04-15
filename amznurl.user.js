@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Amazon URL shortener
+// @name         Amazon URL Shortener
 // @description  replace the amazon url to shorter version
 // @namespace    https://github.com/shosatojp/amazon-url-shortener
 // @homepage     https://github.com/shosatojp/amazon-url-shortener
