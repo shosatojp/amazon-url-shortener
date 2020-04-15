@@ -14,10 +14,48 @@
 // @noframes
 // ==/UserScript==
 
-(() => {
-    const match = location.pathname.match(/\/.*\/dp\/(.*)(\/.*)?/i);
-    if (match) {
-        const newurl = `/dp/${match[1]}`;
-        history.replaceState(null, null, newurl);
+(async () => {
+    /**
+     * parse pathname and returns [prefix, id]
+     */
+    async function parse(pathname) {
+        const matchgp = pathname.match(/\/(?:.*\/)?(dp|gp\/product|gp\/video\/detail)\/([^/]*)(?:\/.*)?/i);
+        if (!matchgp) throw Error();
+        return [matchgp[1], matchgp[2]];
+    }
+
+    /**
+     * get parsed array and return new url pathname
+     */
+    async function getUrl(parsed) {
+        return newurl = '/' + parsed.join('/');
+    }
+
+    /**
+     * do a test
+     */
+    async function test(pathname, result) {
+        return await parse(pathname).then(parsed => getUrl(parsed)).then(url => {
+            if (url !== result) throw Error();
+        });
+    }
+
+    /**
+     * replace url if browser else do tests
+     */
+    if (typeof location !== 'undefined') {
+        parse(location.pathname).then(parsed => getUrl(parsed)).then(url => {
+            history.replaceState(null, null, url);
+        }).catch(() => 0);
+    } else {
+        Promise.all([
+            test('/dp/4522429878', '/dp/4522429878'),
+            test('/dp/4522429878/hoge', '/dp/4522429878'),
+            test('/hoge/dp/4522429878', '/dp/4522429878'),
+            test('/gp/video/detail/B01J4DE8YM', '/gp/video/detail/B01J4DE8YM'),
+            test('/gp/video/detail/B01J4DE8YM/ref=atv_hm_', '/gp/video/detail/B01J4DE8YM'),
+        ])
+            .then(() => console.log('OK'))
+            .catch(() => console.log('test failed'));
     }
 })();
