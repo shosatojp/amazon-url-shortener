@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         Amazon URL shortenizer
+// @name         Amazon URL shortener
 // @description  replace the amazon url to shorter version
-// @namespace    https://github.com/shosatojp/amazon-url-shortenizer
-// @homepage     https://github.com/shosatojp/amazon-url-shortenizer
+// @namespace    https://github.com/shosatojp/amazon-url-shortener
+// @homepage     https://github.com/shosatojp/amazon-url-shortener
 // @version      0.1
 // @author       Sho Sato
 // @match        *://www.amazon.co.jp/*
 // @match        *://www.amazon.com/*
-// @require      file:///home/sho/repos/amazon-url-shortenizer/amznurl.user.js
-// @updateURL    https://github.com/shosatojp/amazon-url-shortenizer/raw/master/amznurl.user.js?
-// @downloadURL  https://github.com/shosatojp/amazon-url-shortenizer/raw/master/amznurl.user.js?
+// @require      file:///home/sho/repos/amazon-url-shortener/amznurl.user.js
+// @updateURL    https://github.com/shosatojp/amazon-url-shortener/raw/master/amznurl.user.js?
+// @downloadURL  https://github.com/shosatojp/amazon-url-shortener/raw/master/amznurl.user.js?
 // @run-at       document-start
 // @noframes
 // ==/UserScript==
